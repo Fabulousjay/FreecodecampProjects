@@ -1,0 +1,126 @@
+.button {
+  border: 0;
+  cursor: pointer;
+  margin: 0;
+  display: inline-flex;
+  outline: 0;
+  padding: 8px 20px;
+  position: relative;
+  align-items: center;
+  user-select: none;
+  vertical-align: middle;
+  -moz-appearance: none;
+  justify-content: center;
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  color: $dark-blue;
+  font-size: 1rem;
+  min-width: 64px;
+  box-sizing: border-box;
+  font-weight: 500;
+  line-height: 1.75;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.button-animated {
+  color: $dark-blue;
+  border: 4px solid;
+  z-index: 1;
+  overflow: hidden;
+  position: relative;
+  font-size: 16px;
+  background: none;
+  transition: border-color 0.3s, color 0.3s;
+  font-weight: 600;
+  border-color: $white;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  vertical-align: middle;
+  -webkit-transition: border-color 0.3s, color 0.3s;
+  -moz-osx-font-smoothing: grayscale;
+  transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+  -webkit-backface-visibility: hidden;
+  -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+  &:before {
+    top: 0;
+    left: 0;
+    width: 150%;
+    height: 100%;
+    content: "";
+    z-index: -1;
+    position: absolute;
+    transform: rotate3d(0, 0, 1, -45deg) translate3d(0, -3em, 0);
+    background: $dark-blue;
+    transition: transform 0.3s, opacity 0.3s, background-color 0.3s;
+    transform-origin: 0% 100%;
+    -webkit-transform: rotate3d(0, 0, 1, -45deg) translate3d(0, -3em, 0);
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.3s,
+      background-color 0.3s;
+    -webkit-transform-origin: 0% 100%;
+  }
+  &:hover:before,
+  &:focus {
+    opacity: 1;
+    background-color: $dark-blue;
+    transform: rotate3d(0, 0, 1, 0deg);
+    -webkit-transform: rotate3d(0, 0, 1, 0deg);
+    transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+    -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+  }
+}
+
+.button {
+  &--plain {
+    border: none;
+    background: none;
+    font-family: inherit;
+    font-size: 16px;
+    display: inline-block;
+    padding: 0;
+    cursor: pointer;
+    border-bottom: 1px solid transparent;
+    transition: all ease-in 0.3s;
+
+    &:hover,
+    &:focus {
+      outline: none;
+    }
+
+    &:hover {
+      outline: none;
+      border-bottom-color: darken($grey__light, 80%);
+    }
+  }
+
+  &--outlined {
+    @extend .button, .button-animated;
+    color: $dark-blue;
+    border-color: $dark-blue;
+    &:hover,
+    &:focus {
+      color: $white;
+    }
+  }
+
+  &--contained {
+    @extend .button, .button-animated;
+    color: $white;
+    border-color: $dark-blue;
+    background: $dark-blue;
+    &:hover {
+      color: $dark-blue;
+      border-color: $dark-blue;
+    }
+    &:before {
+      background: $white;
+    }
+    &:hover:before,
+    &:focus {
+      color: $dark-blue;
+      background-color: $white;
+    }
+  }
+}

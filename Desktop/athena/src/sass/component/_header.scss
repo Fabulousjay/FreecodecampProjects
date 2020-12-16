@@ -1,0 +1,180 @@
+.header {
+  top: 0;
+  right: 0;
+  padding: 0;
+  left: auto;
+  width: 100%;
+  display: flex;
+  z-index: 1201;
+  flex-shrink: 0;
+  position: fixed;
+  box-sizing: border-box;
+  flex-direction: column;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+    0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+
+  @include breakpoint("md", "up") {
+    box-shadow: none;
+    font-weight: 500;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  &__logo {
+    width: 75%;
+    border: none;
+    padding: 0 5px;
+    font-size: 20px;
+    cursor: pointer;
+    display: initial;
+    font-weight: 700;
+    border-radius: 0;
+    min-height: 60px;
+    color: $white;
+    line-height: 60px;
+    text-align: center;
+    letter-spacing: 1.2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.2s ease-in-out;
+    background: transparent;
+
+    @include breakpoint("md", "up") {
+      color: $dark-blue;
+    }
+
+    &:hover {
+      color: inherit;
+      border: none;
+    }
+  }
+
+  &--dark {
+    color: $white;
+
+    @include breakpoint("md", "up") {
+      color: $white;
+      background: $dark-blue;
+    }
+
+    & .nav__item {
+      @include breakpoint("md", "up") {
+        color: $white;
+        border-color: transparent;
+
+        &:hover,
+        &:focus {
+          color: $dark-blue;
+          border-color: $white;
+        }
+
+        &:hover:before,
+        &:focus {
+          background-color: $white;
+        }
+      }
+    }
+
+    & .header__logo {
+      color: $white;
+    }
+  }
+
+  &--light {
+    color: $white;
+    background: $white;
+
+    @include breakpoint("md", "up") {
+      color: $dark-blue;
+      background: transparent;
+    }
+
+    & .nav__item {
+      color: $dark-blue;
+      @include breakpoint("md", "up") {
+        color: $dark-blue;
+        background: transparent;
+        border-color: transparent;
+
+        &:hover,
+        &:focus {
+          color: $white;
+          border-color: $dark-blue;
+        }
+
+        &:hover:before,
+        &:focus {
+          backgroundcolor: $dark-blue;
+        }
+      }
+    }
+  }
+}
+
+.nav {
+  height: 0;
+  display: flex;
+  z-index: 1;
+  overflow: hidden;
+  flex-direction: column;
+  background-color: $white;
+
+  @include breakpoint("md", "up") {
+    flex: 3;
+    height: auto;
+    overflow: auto;
+    flex-direction: row;
+    align-items: center;
+    background-color: transparent;
+    justify-content: space-evenly;
+  }
+
+  &__item {
+    @extend .button--outlined;
+    border: none;
+    font-weight: 500;
+    border-radius: 0;
+    padding: 0 25px;
+    min-height: 60px;
+    line-height: 60px;
+    letter-spacing: 1.2px;
+    text-decoration: none;
+    display: initial;
+    text-transform: capitalize;
+    transition: all 0.2s ease-in-out;
+    border-bottom: 1px solid lighten($dark-blue, 20%);
+
+    @include breakpoint("md", "up") {
+      color: inherit;
+      display: inline-flex;
+      min-height: 45px;
+      border-radius: 4px;
+      line-height: normal;
+      border-bottom: none;
+      text-transform: uppercase;
+    }
+
+    &--active {
+      opacity: 1;
+    }
+
+    &:last-child {
+      @include breakpoint("md", "up") {
+        border: "none";
+      }
+    }
+
+    &:hover {
+      font-weight: 600;
+    }
+
+    &--light {
+      color: $dark-blue;
+    }
+
+    &--dark {
+      color: $white;
+    }
+  }
+}

@@ -1,0 +1,54 @@
+body {
+  -webkit-font-smoothing: antialiased;
+  font-family: brandon-grotesque, sans-serif;
+}
+
+p {
+  margin: 0;
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  line-height: 1.334;
+}
+
+h5 {
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.334;
+}
+
+div,
+form {
+  box-sizing: border-box;
+}
+
+.content {
+  padding: 0;
+  width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  background-color: $white;
+
+  &__wrapper {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}

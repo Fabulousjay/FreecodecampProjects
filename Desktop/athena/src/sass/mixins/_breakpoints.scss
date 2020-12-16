@@ -1,0 +1,28 @@
+$sm: 600px;
+$md: 960px;
+$lg: 1280px;
+$xl: 1920px;
+
+/**
+* $size: one of above
+* $position: up | down | only | ?between
+*/
+@mixin breakpoint($size, $position) {
+  @if ($size == sm) {
+    @media (min-width: $sm) {
+      @content;
+    }
+  } @else if ($size == md) {
+    @media (min-width: $md) {
+      @content;
+    }
+  } @else if ($size == lg) {
+    @media (min-width: $lg) {
+      @content;
+    }
+  } @else if ($size == xl) {
+    @media (min-width: $xl) {
+      @content;
+    }
+  }
+}

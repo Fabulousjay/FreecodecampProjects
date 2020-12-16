@@ -1,0 +1,23 @@
+image: node:14.6.0
+
+pipelines:
+  default:
+    - step:
+        name: "Build and Test"
+        script:
+          - yarn install
+          - yarn lint
+          - yarn test
+
+    # The following deployment steps will be executed for each pipeline run. To configure your steps and conditionally deploy see https://support.atlassian.com/bitbucket-cloud/docs/configure-bitbucket-pipelinesyml/
+    # - step:
+    #     name: "Deployment to Staging"
+    #     deployment: staging
+    #     script:
+    #       - echo "Your deployment to staging script goes here..."
+    # - step:
+    #     name: "Deployment to Production"
+    #     deployment: production
+    #     trigger: "manual"
+    #     script:
+    #       - echo "Your deployment to production script goes here..."

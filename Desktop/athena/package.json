@@ -1,0 +1,110 @@
+{
+	"name": "athena",
+	"version": "0.1.0",
+	"private": true,
+	"dependencies": {
+		"@apollo/client": "^3.2.5",
+		"@babel/plugin-syntax-jsx": "^7.12.1",
+		"@material-ui/core": "^4.11.2",
+		"@material-ui/icons": "^4.9.1",
+		"@material-ui/lab": "^4.0.0-alpha.56",
+		"@material-ui/styles": "^4.10.0",
+		"@testing-library/jest-dom": "^5.11.4",
+		"@testing-library/react": "^11.1.0",
+		"@testing-library/user-event": "^12.1.10",
+		"@types/classnames": "^2.2.10",
+		"@types/color": "^3.0.1",
+		"@types/config": "^0.0.36",
+		"@types/lodash": "^4.14.149",
+		"@types/pluralize": "^0.0.29",
+		"@types/react-router-dom": "^5.1.3",
+		"@types/react-router-hash-link": "^1.2.1",
+		"axios": "^0.19.2",
+		"classnames": "^2.2.6",
+		"color": "^3.1.2",
+		"graphql": "^15.4.0",
+		"jss": "^10.4.0",
+		"jss-plugin-extend": "^10.1.1",
+		"lodash": "^4.17.15",
+		"moment": "^2.27.0",
+		"node-sass": "^4.14.1",
+		"pluralize": "^8.0.0",
+		"react": "^17.0.1",
+		"react-dom": "^17.0.1",
+		"react-icons": "^3.9.0",
+		"react-jss": "^10.4.0",
+		"react-router-dom": "^5.1.2",
+		"react-router-hash-link": "^1.2.2",
+		"react-scripts": "4.0.0",
+		"react-social-login": "^3.4.7",
+		"react-toastify": "^6.2.0",
+		"react-toastr": "^3.0.0",
+		"toastr": "^2.1.4",
+		"typescript": "^3.8.3",
+		"typewriter-effect": "^2.13.0",
+		"universal-cookie": "^4.0.3",
+		"web-vitals": "^0.2.4"
+	},
+	"scripts": {
+		"start": "react-scripts start",
+		"build": "react-scripts build",
+		"test": "jest -c jest.config.json",
+		"test:coverage": "jest test --coverage --runInBand --watchAll=false",
+		"eject": "react-scripts eject",
+		"lint": "eslint 'src/**/*.{ts,js,tsx}' -c .eslintrc.json",
+		"lint-fix": "eslint --fix 'src/**/*.{ts,js,tsx}' -c .eslintrc.check.json",
+		"lint-check": "eslint 'src/**/*.{ts,js,tsx}' -c .eslintrc.check.json",
+		"config-check": "eslint --print-config 'src/**/*.{ts,js,tsx}' -c .eslintrc.json | eslint-config-prettier-check",
+		"format": "prettier --write 'src/**/*.{js,ts,tsx}'"
+	},
+	"eslintConfig": {
+		"extends": [
+			"react-app",
+			"react-app/jest"
+		]
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	},
+	"devDependencies": {
+		"@babel/preset-env": "^7.12.1",
+		"@babel/preset-react": "^7.12.1",
+		"@babel/preset-typescript": "^7.12.1",
+		"@types/enzyme": "^3.10.8",
+		"@types/enzyme-adapter-react-16": "^1.0.6",
+		"@types/react-test-renderer": "^16.9.3",
+		"@types/toastr": "^2.1.38",
+		"@typescript-eslint/eslint-plugin": "^4.6.0",
+		"@typescript-eslint/parser": "^4.6.0",
+		"babel-jest": "^26.6.1",
+		"enzyme": "^3.11.0",
+		"enzyme-adapter-react-16": "^1.15.5",
+		"enzyme-to-json": "^3.6.1",
+		"eslint": "^7.12.1",
+		"eslint-config-airbnb": "^18.2.0",
+		"eslint-config-prettier": "^6.15.0",
+		"eslint-plugin-import": "^2.22.1",
+		"eslint-plugin-jsx-a11y": "^6.4.1",
+		"eslint-plugin-prettier": "^3.2.0",
+		"eslint-plugin-react": "^7.21.5",
+		"eslint-plugin-react-hooks": "^4.2.0",
+		"pre-commit": "^1.2.2",
+		"prettier": "2.1.2",
+		"prettier-eslint": "^12.0.0",
+		"react-test-renderer": "^17.0.1",
+		"ts-jest": "^26.4.3",
+		"typescript-eslint": "^0.0.1-alpha.0"
+	},
+	"pre-commit": [
+		"lint-check"
+	]
+}

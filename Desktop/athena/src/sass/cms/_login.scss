@@ -1,0 +1,112 @@
+.link {
+  color: inherit;
+  font-weight: 400;
+  line-height: 1.5;
+  text-decoration: none;
+  font-size: 1.1428571428571428rem;
+}
+
+.login {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-color: #fafafa;
+  font-family: brandon-grotesque, sans-serif;
+
+  &__wrapper {
+    width: 388px;
+    background-color: $white;
+    border: 1px solid $grey__light;
+  }
+
+  &__header {
+    font-size: 22px;
+    padding: 25px 0;
+    text-align: center;
+    border-bottom: 1px solid $grey__light;
+  }
+
+  &__social {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+
+    & a {
+      margin-right: 15px;
+    }
+
+    & svg {
+      width: 2em;
+      height: 2em;
+      stroke-width: 1;
+      color: $dark-blue;
+    }
+  }
+
+  &__footer {
+    @extend .link;
+    display: block;
+    padding: 8px 0;
+    font-size: 16px;
+    text-align: center;
+    border-top: 1px solid $grey__light;
+    &:hover {
+      background-color: #fafafa;
+    }
+  }
+
+  &__logo {
+    font-size: 30px;
+    font-weight: 600;
+    color: $dark-blue;
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+
+  &__form {
+    padding: 20px 40px 50px 40px;
+    // box-shadow: 0 0 9px 2px lighten($dark-blue, 45%);
+  }
+
+  &__links {
+    display: flex;
+    margin-top: 16px;
+    align-items: center;
+    justify-content: space-between;
+
+    & a {
+      @extend .link;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__submit {
+    width: 100%;
+    font-size: 14px;
+    padding: 6px 14px;
+    letter-spacing: 1px;
+    font-family: inherit;
+  }
+
+  &__signup {
+    display: flex;
+    margin-top: 16px;
+    align-items: center;
+    justify-content: center;
+
+    & a {
+      @extend .link;
+      font-weight: 600;
+      margin-left: 10px;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

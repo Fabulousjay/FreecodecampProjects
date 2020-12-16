@@ -1,0 +1,36 @@
+.form {
+  position: relative;
+  border: 1px solid transparent;
+  &--editable {
+  }
+}
+
+.editable-form {
+  &__wrapper {
+    display: block;
+    padding: 10px;
+    border: 1px dashed transparent;
+    @include transition(border-color ease-in 0.2s);
+
+    & > svg {
+      display: none;
+      z-index: 3;
+    }
+
+    &:hover {
+      border: 1px dashed #333;
+      & svg {
+        display: block;
+      }
+    }
+  }
+
+  &__action {
+    position: absolute;
+    right: -8px;
+    top: -8px;
+    cursor: pointer;
+    background-color: $white;
+    padding: 4px;
+  }
+}

@@ -1,0 +1,9 @@
+.form {
+  &__field {
+  }
+  &__submit {
+    @extend .button--contained;
+    margin: 0 auto;
+    margin-top: 16px;
+  }
+}

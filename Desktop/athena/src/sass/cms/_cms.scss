@@ -1,0 +1,20 @@
+.cms {
+  display: flex;
+  min-height: 100vh;
+  height: 100vh;
+  overflow-y: hidden;
+  font-family: brandon-grotesque, sans-serif;
+  &__sidebar {
+    width: 225px;
+    height: 100%;
+    overflow-y: inherit;
+  }
+  &__body {
+    height: inherit;
+    overflow-y: scroll;
+    width: calc(100% - 225px);
+    box-shadow: 0 0 1px 1px lighten($dark-blue, 65%);
+    background-color: lighten($dark-blue, 65%);
+    padding: 1.5% 2%;
+  }
+}

@@ -1,0 +1,18 @@
+.title {
+  flex: 0 1;
+  width: 100%;
+  line-height: 1.334;
+  text-align: center;
+  text-transform: uppercase;
+
+  @include breakpoint("md", "up") {
+    font-size: 3rem;
+  }
+}
+
+.sub-title {
+  margin-top: 1rem;
+  font-weight: 400;
+  font-size: 1.5rem;
+  text-align: center;
+}
